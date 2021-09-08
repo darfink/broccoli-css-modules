@@ -23,7 +23,7 @@ module.exports = class CSSModules extends Writer {
     let extension = options.extension || 'css';
 
     super([inputNode], Object.assign({
-      cacheInclude: [new RegExp(`\\.${extension}$`)]
+      cacheInclude: [new RegExp(`\\.${extension}$`), new RegExp(`\\.hbs$`)]
     }, options));
 
     this.plugins = unwrapPlugins(options.plugins || []);
